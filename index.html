@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+
+
+  </head>
+  <style>
+  form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 20%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+ .inputstyle {
+  margin-bottom:2%;
+  margin-top:3%;
+  margin-left:3%;
+}
+
+ .inputstyle1 {
+  margin-bottom:5%;
+  margin-top:5%;
+  width:25%;
+}
+
+.divstyle {
+  border: 1px solid black;
+  margin: 1rem;
+  align:center;
+}
+
+.div{
+max-width: 500px;
+border: 1px solid black;
+margin: auto;
+margin-bottom: 2%;
+}
+
+
+</style>
+  <div>
+      <h3 align="center"><u>Assignment 5</u></h3>
+
+                <form class="searchfiledisplaycount" action="/searchfiledisplaycount" method="GET" enctype="multipart/form-data"
+                      style="margin:auto;max-width:600px">
+                    <b>1. Enter text file and find number of words in it </b><br>
+                     Enter Filename<input type="text"  name="search" class="inputstyle">
+                    <button type="submit">Show</i></button>
+                </form>
+                <br>
+
+
+            <form class="removepunctstopwithfilewrite" action="/removepunctstopwithfilewrite" method="GET" enctype="multipart/form-data"
+                  style="margin:auto;max-width:600px">
+                <b>2. Remove Punctuations and stop words supplied and show first two lines</b><br>
+                Enter punctuations<input type="text"  name="punct" class="inputstyle"><br>
+                Enter stop words<input type="text"  name="stopword" class="inputstyle"><br>
+                <button type="submit">Show</i></button>
+            </form><br>
+
+
+
+            <form class="upperlower" action="/upperlower" method="GET" enctype="multipart/form-data"
+                  style="margin:auto;max-width:600px">
+                <b>3. Convert all words to lowercase</b><br>
+                Enter filename<input type="text"  name="textfile" class="inputstyle">
+                <button type="submit">Show</i></button>
+            </form>
+
+            <form class="wordstemmerwithoutfilewrite" action="/wordstemmerwithoutfilewrite" method="GET" enctype="multipart/form-data"
+                  style="margin:auto;max-width:600px">
+                <b>4. Stem the mentioned words</b><br>
+                Enter word<input type="text"  name="stemword" class="inputstyle">
+                <button type="submit">Show</i></button>
+            </form>
+
+      <form class="findwordcountlines" action="/findwordcountlines" method="GET" enctype="multipart/form-data"
+                  style="margin:auto;max-width:600px">
+                <b>5. Find word in document, count and find lines containing word</b><br>
+                Enter word to be searched<input type="text"  name="search" class="inputstyle"><br>
+                Enter Doc name<input type="text"  name="filename" class="inputstyle">
+
+                <button type="submit">Show</i></button>
+            </form>
+
+      <form class="findtwowordNlines" action="/findtwowordNlines" method="GET" enctype="multipart/form-data"
+                  style="margin:auto;max-width:600px">
+                <b>6. Find two words in document, find N lines containing word</b><br>
+                Enter N<input type="text"  name="number" class="inputstyle"><br>
+                Enter words<input type="text"  name="wordsinput" class="inputstyle">
+
+                <button type="submit">Show</i></button>
+            </form>
+
+        <form class="findparawithword" action="/findparawithword" method="GET" enctype="multipart/form-data"
+                  style="margin:auto;max-width:600px">
+                <b>7. Find para with word</b><br>
+                Enter words<input type="text"  name="text" class="inputstyle">
+
+                <button type="submit">Show</i></button>
+            </form>
+  </div>
+  </body>
+</html>

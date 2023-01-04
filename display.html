@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="static/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Silpa Vijayan Geetha(1001989441)</title>
+
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+          name='viewport'/>
+    <!-- Fonts and icons -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="static/css/paper-dashboard.css?v=2.0.1" rel="stylesheet"/>
+    <!-- CSS -->
+    <link href="static/demo/demo.css" rel="stylesheet"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+
+
+ .inputstyle {
+  margin-bottom:2%;
+  margin-top:3%;
+  margin-left:3%;
+}
+
+ .inputstyle1 {
+  margin-bottom:5%;
+  margin-top:5%;
+  width:25%;
+}
+
+.divstyle {
+  border: 1px solid black;
+  margin: 1rem;
+  align:center;
+}
+
+.div{
+max-width: 700px;
+border: 1px solid black;
+margin: auto;
+margin-bottom: 2%;
+}
+
+
+
+
+</style>
+
+<body>
+<h3 align="center">Assignment 5</h3>
+<div>
+    {% if number_of_words is defined%}
+    <div class="div">
+        <b>WordCount:</b> {{number_of_words}} words</b>
+    </div>
+    {% endif %}
+
+
+    {% if lineswithword is defined%}
+    <div class="div">
+        <b>Lines Containing the word:</b>
+        {% for item in lineswithword%}
+        <div>
+            {{item}}
+        </div>
+        {%endfor%}
+    </div>
+    {% endif %}
+
+
+    {% if without_punctstop_final is defined%}
+    {% for key,value in without_punctstop_final.items() %}
+    <div class="div">
+        <b> Key: </b><br>{{key}}
+        <div>
+            <b>Value:</b> {{value}}
+        </div>
+    </div>
+
+    {% endfor %}
+    {% endif %}
+
+    {% if para_withword_index is defined%}
+    {% for key,value in para_withword_index.items() %}
+    <div class="div">
+        <b>Filename: </b>{{value[0]}} <br>
+        <b>Paragraph Number :</b>{{value[1]}}<br>
+        <b>Paragraph:</b> {{value[2]}}<br>
+        <b>Index Position:</b> {{value[3]}}<br>
+    </div>
+
+    {% endfor %}
+    {% endif %}
+
+    {% if adjwordNlines is defined%}
+    {% for key,value in adjwordNlines.items() %}
+    <div class="div">
+        <b> Filename: </b>{{key}}<br>
+        <b>Text:</b>
+        <div>{{value}}</div>
+    </div>
+
+    {% endfor %}
+    {% endif %}
+
+    {% if words_to_lower is defined%}
+    <div class="div">
+        <b>Words converted to lowercase:</b>
+        {% for item in words_to_lower%}
+        <div>
+            {{item}}
+        </div>
+        {%endfor%}
+    </div>
+    {% endif %}
+
+    {% if wordslist is defined%}
+    <div class="div">
+        <b>Words removed stopwords</b>
+        {% for item in wordslist%}
+        <div>
+            {{item}}
+        </div>
+        {%endfor%}
+    </div>
+    {% endif %}
+
+    {% if stemwordslist is defined%}
+    <div class="div">
+        <b>Data after Stemming</b>
+        {% for item in stemwordslist%}
+        <div>
+            {{item}}
+        </div>
+        {%endfor%}
+    </div>
+    {% endif %}
+
+    {% if without_stopword_final is defined%}
+    <div class="div">
+        <b>Output:</b> {{without_stopword_final}} </b>
+    </div>
+    {% endif %}
+
+    {% if stemmed_final is defined%}
+    {% for key,value in stemmed_final.items() %}
+    <div class="div">
+        <b> Key: </b><br>{{key}}
+        <b>Value:</b> {{value}}
+
+    </div>
+
+    {% endfor %}
+    {% endif %}
+
+</div>
+</body>
+</html>
